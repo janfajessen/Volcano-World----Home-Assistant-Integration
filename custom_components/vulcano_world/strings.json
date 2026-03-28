@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Volcano World",
+        "description": "Configure which active volcanoes to monitor.\n\nData sources: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — no API key required.",
+        "data": {
+          "location_mode": "Location filter",
+          "radius_km": "Radius (km)",
+          "update_interval": "Update interval (min)",
+          "source_gvp": "Smithsonian GVP (global, ~45 active volcanoes)",
+          "source_usgs": "USGS HANS (US + alert levels)",
+          "unit": "Distance unit"
+        },
+        "data_description": {
+          "location_mode": "Choose 'Home' to filter by your HA location, 'Custom' to pick a point on the map, or 'World' to show all active volcanoes globally.",
+          "radius_km": "Only used in 'Home' or 'Custom' mode. Ignored in 'World' mode."
+        }
+      },
+      "custom_location": {
+        "title": "Pick your reference location",
+        "description": "Click the map to set the center of the filter radius.",
+        "data": {
+          "location": "Reference location"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to data sources. Check your internet connection.",
+      "no_data": "No active volcano data could be retrieved from any source.",
+      "both_sources_disabled": "At least one data source must be enabled."
+    },
+    "abort": {
+      "already_configured": "Volcano World is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Volcano World",
+        "description": "Update filter and data source preferences.",
+        "data": {
+          "location_mode": "Location filter",
+          "radius_km": "Radius (km)",
+          "update_interval": "Update interval (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Distance unit"
+        }
+      },
+      "custom_location": {
+        "title": "Update reference location",
+        "data": {
+          "location": "Reference location"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Active Volcanoes"
+      },
+      "weekly_report_count": {
+        "name": "In Weekly Report"
+      },
+      "elevated_count": {
+        "name": "Elevated Alert Volcanoes"
+      },
+      "highest_alert": {
+        "name": "Highest Alert Level"
+      },
+      "nearby_count": {
+        "name": "Nearby Active Volcanoes"
+      },
+      "closest_volcano": {
+        "name": "Closest Active Volcano"
+      },
+      "most_dangerous_volcano": {
+        "name": "Most Dangerous Volcano"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Volcanic Activity Nearby"
+      },
+      "elevated_nearby": {
+        "name": "Elevated Volcano Nearby"
+      },
+      "warning_global": {
+        "name": "Global Volcano Warning"
+      }
+    }
+  }
+}

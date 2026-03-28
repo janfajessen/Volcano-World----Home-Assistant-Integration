@@ -1,0 +1,157 @@
+"""Bundled coordinate database for globally active volcanoes.
+
+Data sourced from the Smithsonian Global Volcanism Program (public domain).
+Keys are GVP volcano numbers (6-digit integers).
+"""
+from __future__ import annotations
+
+# Format: gvp_number -> {name, lat, lon, country, type}
+VOLCANO_DATABASE: dict[int, dict] = {
+    # ── Europe / Atlantic ────────────────────────────────────────────────────
+    211060: {"name": "Etna",              "lat": 37.748,  "lon":  15.000, "country": "Italy",           "type": "Shield volcano"},
+    211040: {"name": "Stromboli",         "lat": 38.789,  "lon":  15.213, "country": "Italy",           "type": "Stratovolcano"},
+    211050: {"name": "Vulcano",           "lat": 38.404,  "lon":  14.962, "country": "Italy",           "type": "Stratovolcano"},
+    211020: {"name": "Vesuvius",          "lat": 40.821,  "lon":  14.426, "country": "Italy",           "type": "Stratovolcano"},
+    211003: {"name": "Campi Flegrei",     "lat": 40.827,  "lon":  14.139, "country": "Italy",           "type": "Caldera"},
+    212040: {"name": "Santorini",         "lat": 36.404,  "lon":  25.396, "country": "Greece",          "type": "Shield volcano"},
+    212050: {"name": "Nisyros",           "lat": 36.587,  "lon":  27.180, "country": "Greece",          "type": "Stratovolcano"},
+    373010: {"name": "Grimsvotn",         "lat": 64.416,  "lon": -17.316, "country": "Iceland",         "type": "Subglacial volcano"},
+    372070: {"name": "Hekla",             "lat": 63.983,  "lon": -19.666, "country": "Iceland",         "type": "Stratovolcano"},
+    372030: {"name": "Katla",             "lat": 63.633,  "lon": -19.050, "country": "Iceland",         "type": "Subglacial volcano"},
+    371030: {"name": "Reykjanes",         "lat": 63.900,  "lon": -22.700, "country": "Iceland",         "type": "Fissure vent"},
+    373020: {"name": "Askja",             "lat": 65.030,  "lon": -16.750, "country": "Iceland",         "type": "Stratovolcano"},
+    371020: {"name": "Eyjafjallajokull",  "lat": 63.633,  "lon": -19.617, "country": "Iceland",         "type": "Stratovolcano"},
+    383030: {"name": "Teide",             "lat": 28.271,  "lon": -16.642, "country": "Spain",           "type": "Stratovolcano"},
+    383040: {"name": "Cumbre Vieja",      "lat": 28.570,  "lon": -17.840, "country": "Spain",           "type": "Fissure vent"},
+    384010: {"name": "Fogo",              "lat": 14.950,  "lon": -24.350, "country": "Cape Verde",      "type": "Stratovolcano"},
+    # ── Africa / Indian Ocean ─────────────────────────────────────────────────
+    221080: {"name": "Erta Ale",          "lat": 13.600,  "lon":  40.670, "country": "Ethiopia",        "type": "Shield volcano"},
+    221100: {"name": "Dabbahu",           "lat": 12.600,  "lon":  40.480, "country": "Ethiopia",        "type": "Stratovolcano"},
+    222120: {"name": "Ol Doinyo Lengai",  "lat": -2.764,  "lon":  35.914, "country": "Tanzania",        "type": "Stratovolcano"},
+    223030: {"name": "Nyiragongo",        "lat": -1.520,  "lon":  29.250, "country": "DR Congo",        "type": "Stratovolcano"},
+    223020: {"name": "Nyamuragira",       "lat": -1.408,  "lon":  29.200, "country": "DR Congo",        "type": "Shield volcano"},
+    233020: {"name": "Piton de la Fournaise", "lat": -21.244, "lon": 55.708, "country": "France (Reunion)", "type": "Shield volcano"},
+    # ── Japan ─────────────────────────────────────────────────────────────────
+    282080: {"name": "Aira",              "lat": 31.593,  "lon": 130.657, "country": "Japan",           "type": "Caldera"},
+    282030: {"name": "Suwanosejima",      "lat": 29.638,  "lon": 129.716, "country": "Japan",           "type": "Stratovolcano"},
+    284211: {"name": "Nishinoshima",      "lat": 27.247,  "lon": 140.874, "country": "Japan",           "type": "Shield volcano"},
+    283110: {"name": "Asama",             "lat": 36.406,  "lon": 138.523, "country": "Japan",           "type": "Stratovolcano"},
+    282110: {"name": "Aso",               "lat": 32.884,  "lon": 131.104, "country": "Japan",           "type": "Caldera"},
+    282050: {"name": "Kuchinoerabujima",  "lat": 30.443,  "lon": 130.217, "country": "Japan",           "type": "Stratovolcano"},
+    285060: {"name": "Fukutoku-Okanoba", "lat": 24.285,  "lon": 141.481, "country": "Japan",           "type": "Submarine volcano"},
+    283001: {"name": "Ontake",            "lat": 35.893,  "lon": 137.480, "country": "Japan",           "type": "Stratovolcano"},
+    # ── Indonesia ─────────────────────────────────────────────────────────────
+    261080: {"name": "Sinabung",          "lat":  3.170,  "lon":  98.392, "country": "Indonesia",       "type": "Stratovolcano"},
+    261140: {"name": "Marapi",            "lat": -0.381,  "lon": 100.473, "country": "Indonesia",       "type": "Stratovolcano"},
+    262000: {"name": "Krakatau",          "lat": -6.102,  "lon": 105.423, "country": "Indonesia",       "type": "Caldera"},
+    263250: {"name": "Merapi",            "lat": -7.540,  "lon": 110.446, "country": "Indonesia",       "type": "Stratovolcano"},
+    263300: {"name": "Semeru",            "lat": -8.108,  "lon": 112.922, "country": "Indonesia",       "type": "Stratovolcano"},
+    263311: {"name": "Kelud",             "lat": -7.930,  "lon": 112.308, "country": "Indonesia",       "type": "Stratovolcano"},
+    263310: {"name": "Tengger Caldera",   "lat": -7.942,  "lon": 112.950, "country": "Indonesia",       "type": "Caldera"},
+    263340: {"name": "Raung",             "lat": -8.125,  "lon": 114.042, "country": "Indonesia",       "type": "Stratovolcano"},
+    264020: {"name": "Agung",             "lat": -8.342,  "lon": 115.508, "country": "Indonesia",       "type": "Stratovolcano"},
+    264030: {"name": "Rinjani",           "lat": -8.420,  "lon": 116.470, "country": "Indonesia",       "type": "Stratovolcano"},
+    264180: {"name": "Ile Lewotolok",     "lat": -8.274,  "lon": 123.505, "country": "Indonesia",       "type": "Stratovolcano"},
+    264182: {"name": "Lewotobi Laki-laki","lat": -8.540,  "lon": 122.775, "country": "Indonesia",       "type": "Stratovolcano"},
+    264230: {"name": "Sangeang Api",      "lat": -8.197,  "lon": 119.073, "country": "Indonesia",       "type": "Stratovolcano"},
+    266100: {"name": "Lokon-Empung",      "lat":  1.358,  "lon": 124.792, "country": "Indonesia",       "type": "Stratovolcano"},
+    266150: {"name": "Soputan",           "lat":  1.108,  "lon": 124.725, "country": "Indonesia",       "type": "Stratovolcano"},
+    267020: {"name": "Karangetang",       "lat":  2.781,  "lon": 125.407, "country": "Indonesia",       "type": "Stratovolcano"},
+    267040: {"name": "Ruang",             "lat":  2.300,  "lon": 125.370, "country": "Indonesia",       "type": "Stratovolcano"},
+    268010: {"name": "Dukono",            "lat":  1.693,  "lon": 127.894, "country": "Indonesia",       "type": "Stratovolcano"},
+    268020: {"name": "Ibu",               "lat":  1.488,  "lon": 127.630, "country": "Indonesia",       "type": "Stratovolcano"},
+    268070: {"name": "Gamalama",          "lat":  0.800,  "lon": 127.325, "country": "Indonesia",       "type": "Stratovolcano"},
+    # ── Philippines ───────────────────────────────────────────────────────────
+    273030: {"name": "Mayon",             "lat": 13.257,  "lon": 123.685, "country": "Philippines",     "type": "Stratovolcano"},
+    273070: {"name": "Taal",              "lat": 14.002,  "lon": 120.993, "country": "Philippines",     "type": "Caldera"},
+    273083: {"name": "Pinatubo",          "lat": 15.130,  "lon": 120.350, "country": "Philippines",     "type": "Stratovolcano"},
+    273110: {"name": "Bulusan",           "lat": 12.769,  "lon": 124.056, "country": "Philippines",     "type": "Stratovolcano"},
+    272020: {"name": "Kanlaon",           "lat": 10.412,  "lon": 123.132, "country": "Philippines",     "type": "Stratovolcano"},
+    # ── Pacific / Vanuatu / New Zealand ──────────────────────────────────────
+    257100: {"name": "Yasur",             "lat": -19.532, "lon": 169.447, "country": "Vanuatu",         "type": "Stratovolcano"},
+    257040: {"name": "Ambrym",            "lat": -16.250, "lon": 168.122, "country": "Vanuatu",         "type": "Pyroclastic shield"},
+    257030: {"name": "Lopevi",            "lat": -16.507, "lon": 168.346, "country": "Vanuatu",         "type": "Stratovolcano"},
+    255020: {"name": "Ulawun",            "lat": -5.050,  "lon": 151.330, "country": "Papua New Guinea","type": "Stratovolcano"},
+    255030: {"name": "Rabaul",            "lat": -4.271,  "lon": 152.203, "country": "Papua New Guinea","type": "Caldera"},
+    255060: {"name": "Langila",           "lat": -5.525,  "lon": 148.420, "country": "Papua New Guinea","type": "Stratovolcano"},
+    255100: {"name": "Manam",             "lat": -4.080,  "lon": 145.037, "country": "Papua New Guinea","type": "Stratovolcano"},
+    241100: {"name": "Ruapehu",           "lat": -39.281, "lon": 175.568, "country": "New Zealand",     "type": "Stratovolcano"},
+    241040: {"name": "Whakaari",          "lat": -37.521, "lon": 177.183, "country": "New Zealand",     "type": "Stratovolcano"},
+    241080: {"name": "Tongariro",         "lat": -39.157, "lon": 175.632, "country": "New Zealand",     "type": "Stratovolcano"},
+    233010: {"name": "Heard",             "lat": -53.106, "lon":  73.513, "country": "Australia",       "type": "Stratovolcano"},
+    # ── Hawaii / USA ──────────────────────────────────────────────────────────
+    332010: {"name": "Kilauea",           "lat": 19.421,  "lon": -155.287,"country": "USA",             "type": "Shield volcano"},
+    332020: {"name": "Mauna Loa",         "lat": 19.475,  "lon": -155.608,"country": "USA",             "type": "Shield volcano"},
+    311060: {"name": "Shishaldin",        "lat": 54.756,  "lon": -163.970,"country": "USA",             "type": "Stratovolcano"},
+    312030: {"name": "Pavlof",            "lat": 55.418,  "lon": -161.894,"country": "USA",             "type": "Stratovolcano"},
+    312070: {"name": "Veniaminof",        "lat": 56.195,  "lon": -159.384,"country": "USA",             "type": "Stratovolcano"},
+    311080: {"name": "Great Sitkin",      "lat": 52.076,  "lon": -176.130,"country": "USA",             "type": "Stratovolcano"},
+    311240: {"name": "Cleveland",         "lat": 52.825,  "lon": -169.944,"country": "USA",             "type": "Stratovolcano"},
+    313040: {"name": "Wrangell",          "lat": 62.000,  "lon": -144.000,"country": "USA",             "type": "Shield volcano"},
+    321040: {"name": "Mount St. Helens",  "lat": 46.200,  "lon": -122.180,"country": "USA",             "type": "Stratovolcano"},
+    321050: {"name": "Mount Rainier",     "lat": 46.853,  "lon": -121.757,"country": "USA",             "type": "Stratovolcano"},
+    # ── Mexico / Central America ──────────────────────────────────────────────
+    341090: {"name": "Popocatepetl",      "lat": 19.023,  "lon": -98.622, "country": "Mexico",          "type": "Stratovolcano"},
+    341040: {"name": "Colima",            "lat": 19.514,  "lon": -103.620,"country": "Mexico",          "type": "Stratovolcano"},
+    342090: {"name": "Fuego",             "lat": 14.473,  "lon": -90.880, "country": "Guatemala",       "type": "Stratovolcano"},
+    342030: {"name": "Santiaguito",       "lat": 14.756,  "lon": -91.552, "country": "Guatemala",       "type": "Lava dome"},
+    342110: {"name": "Pacaya",            "lat": 14.381,  "lon": -90.601, "country": "Guatemala",       "type": "Stratovolcano"},
+    343100: {"name": "Santa Ana",         "lat": 13.853,  "lon": -89.630, "country": "El Salvador",     "type": "Stratovolcano"},
+    343090: {"name": "San Miguel",        "lat": 13.434,  "lon": -88.269, "country": "El Salvador",     "type": "Stratovolcano"},
+    344100: {"name": "Masaya",            "lat": 11.985,  "lon": -86.161, "country": "Nicaragua",       "type": "Caldera"},
+    344090: {"name": "Concepcion",        "lat": 11.538,  "lon": -85.622, "country": "Nicaragua",       "type": "Stratovolcano"},
+    345033: {"name": "Arenal",            "lat": 10.462,  "lon": -84.703, "country": "Costa Rica",      "type": "Stratovolcano"},
+    345020: {"name": "Rincon de la Vieja","lat": 10.830,  "lon": -85.324, "country": "Costa Rica",      "type": "Stratovolcano"},
+    345050: {"name": "Turrialba",         "lat": 10.025,  "lon": -83.767, "country": "Costa Rica",      "type": "Stratovolcano"},
+    345070: {"name": "Poas",              "lat": 10.200,  "lon": -84.233, "country": "Costa Rica",      "type": "Stratovolcano"},
+    # ── South America ─────────────────────────────────────────────────────────
+    351080: {"name": "Galeras",           "lat":  1.220,  "lon": -77.372, "country": "Colombia",        "type": "Stratovolcano"},
+    351020: {"name": "Nevado del Ruiz",   "lat":  4.895,  "lon": -75.322, "country": "Colombia",        "type": "Stratovolcano"},
+    351030: {"name": "Nevado del Huila",  "lat":  2.930,  "lon": -76.030, "country": "Colombia",        "type": "Stratovolcano"},
+    352050: {"name": "Cotopaxi",          "lat": -0.677,  "lon": -78.436, "country": "Ecuador",         "type": "Stratovolcano"},
+    352080: {"name": "Tungurahua",        "lat": -1.467,  "lon": -78.442, "country": "Ecuador",         "type": "Stratovolcano"},
+    352090: {"name": "Sangay",            "lat": -2.003,  "lon": -78.341, "country": "Ecuador",         "type": "Stratovolcano"},
+    352070: {"name": "Reventador",        "lat": -0.077,  "lon": -77.656, "country": "Ecuador",         "type": "Stratovolcano"},
+    354006: {"name": "Sabancaya",         "lat": -15.787, "lon": -71.857, "country": "Peru",            "type": "Stratovolcano"},
+    354030: {"name": "Ubinas",            "lat": -16.355, "lon": -70.903, "country": "Peru",            "type": "Stratovolcano"},
+    357090: {"name": "Villarrica",        "lat": -39.420, "lon": -71.930, "country": "Chile",           "type": "Stratovolcano"},
+    358057: {"name": "Calbuco",           "lat": -41.326, "lon": -72.614, "country": "Chile",           "type": "Stratovolcano"},
+    358060: {"name": "Hudson",            "lat": -45.900, "lon": -72.970, "country": "Chile",           "type": "Stratovolcano"},
+    357070: {"name": "Lascar",            "lat": -23.370, "lon": -67.730, "country": "Chile",           "type": "Stratovolcano"},
+    357060: {"name": "Llullaillaco",      "lat": -24.720, "lon": -68.530, "country": "Chile/Argentina", "type": "Stratovolcano"},
+    357020: {"name": "Copahue",           "lat": -37.856, "lon": -71.183, "country": "Chile/Argentina", "type": "Stratovolcano"},
+    # ── Caribbean ─────────────────────────────────────────────────────────────
+    360050: {"name": "Soufriere Hills",   "lat": 16.720,  "lon": -62.180, "country": "UK (Montserrat)", "type": "Stratovolcano"},
+    360030: {"name": "La Soufriere",      "lat": 13.337,  "lon": -61.179, "country": "St. Vincent",     "type": "Stratovolcano"},
+    360020: {"name": "Soufriere Guadeloupe","lat": 16.044,"lon": -61.664, "country": "France",          "type": "Stratovolcano"},
+    361030: {"name": "Kick-em-Jenny",     "lat": 12.300,  "lon": -61.638, "country": "Grenada",         "type": "Submarine volcano"},
+    # ── Antarctica ────────────────────────────────────────────────────────────
+    390020: {"name": "Erebus",            "lat": -77.530, "lon": 167.170, "country": "Antarctica",      "type": "Stratovolcano"},
+}
+
+# Secondary lookup: lowercase name → gvp_number
+VOLCANO_NAME_LOOKUP: dict[str, int] = {
+    v["name"].lower(): k for k, v in VOLCANO_DATABASE.items()
+}
+
+# Common name aliases (alternative names → canonical GVP key)
+VOLCANO_ALIASES: dict[str, int] = {
+    "sakurajima":               282080,
+    "anak krakatau":            262000,
+    "anak krakatoa":            262000,
+    "krakatoa":                 262000,
+    "bromo":                    263310,
+    "popocatepetl":             341090,
+    "popocatepetl":             341090,
+    "nevado del ruiz":          351020,
+    "rincon de la vieja":       345020,
+    "cumbre vieja":             383040,
+    "la palma":                 383040,
+    "piton de la fournaise":    233020,
+    "white island":             241040,
+    "whakaari/white island":    241040,
+    "lewotobi":                 264182,
+    "lewotobi laki laki":       264182,
+    "ile lewotolok":            264180,
+    "kick-'em-jenny":           361030,
+}
