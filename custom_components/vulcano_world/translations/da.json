@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vulkanernes Verden",
+        "description": "Konfigurer hvilke aktive vulkaner der skal overvåges.\n\nDatakilder: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — ingen API-nøgle påkrævet.",
+        "data": {
+          "location_mode": "Placeringsfilter",
+          "radius_km": "Radius (km)",
+          "update_interval": "Opdateringsinterval (min)",
+          "source_gvp": "Smithsonian GVP (globalt, ~45 aktive vulkaner)",
+          "source_usgs": "USGS HANS (USA + alarmniveauer)",
+          "unit": "Afstandsenhed"
+        },
+        "data_description": {
+          "location_mode": "Vælg 'Hjem' for at filtrere efter din HA-placering, 'Brugerdefineret' for at vælge et punkt på kortet, eller 'Verden' for at vise alle aktive vulkaner globalt.",
+          "radius_km": "Bruges kun i tilstanden 'Hjem' eller 'Brugerdefineret'. Ignoreres i tilstanden 'Verden'."
+        }
+      },
+      "custom_location": {
+        "title": "Vælg din referenceplacering",
+        "description": "Klik på kortet for at indstille midten af filterets radius.",
+        "data": {
+          "location": "Referenceplacering"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunne ikke forbinde til datakilder. Tjek din internetforbindelse.",
+      "no_data": "Ingen aktive vulkandata kunne hentes fra nogen kilde.",
+      "both_sources_disabled": "Mindst én datakilde skal være aktiveret."
+    },
+    "abort": {
+      "already_configured": "Vulkanernes Verden er allerede konfigureret."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Vulkanernes Verden",
+        "description": "Opdater filter- og datakildepræferencer.",
+        "data": {
+          "location_mode": "Placeringsfilter",
+          "radius_km": "Radius (km)",
+          "update_interval": "Opdateringsinterval (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Afstandsenhed"
+        }
+      },
+      "custom_location": {
+        "title": "Opdater referenceplacering",
+        "data": {
+          "location": "Referenceplacering"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Aktive Vulkaner"
+      },
+      "weekly_report_count": {
+        "name": "I Ugentlig Rapport"
+      },
+      "elevated_count": {
+        "name": "Vulkaner med Forhøjet Alarm"
+      },
+      "highest_alert": {
+        "name": "Højeste Alarmniveau"
+      },
+      "nearby_count": {
+        "name": "Aktive Vulkaner i Nærheden"
+      },
+      "closest_volcano": {
+        "name": "Nærmeste Aktive Vulkan"
+      },
+      "most_dangerous_volcano": {
+        "name": "Farligste Vulkan"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Vulkanisk Aktivitet i Nærheden"
+      },
+      "elevated_nearby": {
+        "name": "Vulkan med Forhøjet Alarm i Nærheden"
+      },
+      "warning_global": {
+        "name": "Global Vulkanadvarsel"
+      }
+    }
+  }
+}
