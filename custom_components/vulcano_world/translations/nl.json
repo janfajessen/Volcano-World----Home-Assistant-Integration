@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vulkaan Wereld",
+        "description": "Configureer welke actieve vulkanen bewaakt moeten worden.\n\nGegevensbronnen: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — geen API-sleutel vereist.",
+        "data": {
+          "location_mode": "Locatiefilter",
+          "radius_km": "Straal (km)",
+          "update_interval": "Update-interval (min)",
+          "source_gvp": "Smithsonian GVP (wereldwijd, ~45 actieve vulkanen)",
+          "source_usgs": "USGS HANS (VS + alarmniveaus)",
+          "unit": "Afstandseenheid"
+        },
+        "data_description": {
+          "location_mode": "Kies 'Thuis' om te filteren op je HA-locatie, 'Aangepast' om een punt op de kaart te selecteren, of 'Wereld' om alle actieve vulkanen wereldwijd weer te geven.",
+          "radius_km": "Alleen gebruikt in 'Thuis' of 'Aangepast'-modus. Genegeerd in 'Wereld'-modus."
+        }
+      },
+      "custom_location": {
+        "title": "Kies je referentielocatie",
+        "description": "Klik op de kaart om het middelpunt van de filterstraal in te stellen.",
+        "data": {
+          "location": "Referentielocatie"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kon geen verbinding maken met gegevensbronnen. Controleer je internetverbinding.",
+      "no_data": "Er konden geen actieve vulkaangegevens worden opgehaald uit een bron.",
+      "both_sources_disabled": "Minstens één gegevensbron moet ingeschakeld zijn."
+    },
+    "abort": {
+      "already_configured": "Vulkaan Wereld is al geconfigureerd."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Vulkaan Wereld",
+        "description": "Werk filter- en gegevensbronvoorkeuren bij.",
+        "data": {
+          "location_mode": "Locatiefilter",
+          "radius_km": "Straal (km)",
+          "update_interval": "Update-interval (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Afstandseenheid"
+        }
+      },
+      "custom_location": {
+        "title": "Referentielocatie bijwerken",
+        "data": {
+          "location": "Referentielocatie"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Actieve Vulkanen"
+      },
+      "weekly_report_count": {
+        "name": "In Wekelijks Rapport"
+      },
+      "elevated_count": {
+        "name": "Vulkanen met Verhoogd Alarm"
+      },
+      "highest_alert": {
+        "name": "Hoogste Alarmniveau"
+      },
+      "nearby_count": {
+        "name": "Actieve Vulkanen in de Buurt"
+      },
+      "closest_volcano": {
+        "name": "Dichtstbijzijnde Actieve Vulkaan"
+      },
+      "most_dangerous_volcano": {
+        "name": "Gevaarlijkste Vulkaan"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Vulkanische Activiteit in de Buurt"
+      },
+      "elevated_nearby": {
+        "name": "Vulkaan met Verhoogd Alarm in de Buurt"
+      },
+      "warning_global": {
+        "name": "Wereldwijde Vulkaanwaarschuwing"
+      }
+    }
+  }
+}
