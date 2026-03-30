@@ -13,8 +13,8 @@
           "unit": "Unidad de distancia"
         },
         "data_description": {
-          "location_mode": "Elige 'Home' para filtrar por tu ubicación de HA, 'Personalizada' para seleccionar un punto en el mapa, o 'Mundo' para ver todos los volcanes activos globalmente.",
-          "radius_km": "Solo relevante si el modo es 'Home' o 'Personalizada'. Ignorado en modo 'Mundo'."
+          "location_mode": "Elige 'Hogar' para filtrar por tu ubicación de HA, 'Personalizado' para seleccionar un punto en el mapa, o 'Mundo' para mostrar todos los volcanes activos a nivel global.",
+          "radius_km": "Rango: 50–20.000 km · 31–12.427 millas"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Unidad de distancia"
+        },
+        "data_description": {
+          "radius_km": "Rango: 50–20.000 km · 31–12.427 millas"
         }
       },
       "custom_location": {
