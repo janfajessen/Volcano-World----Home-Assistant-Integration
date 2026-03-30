@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ਜਵਾਲਾਮੁਖੀ ਸੰਸਾਰ",
+        "description": "ਕਿਹੜੇ ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀਆਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨੀ ਹੈ ਕੌਂਫਿਗਰ ਕਰੋ।\n\nਡਾਟਾ ਸਰੋਤ: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — ਕੋਈ API ਕੁੰਜੀ ਲੋੜੀਂਦੀ ਨਹੀਂ।",
+        "data": {
+          "location_mode": "ਸਥਾਨ ਫਿਲਟਰ",
+          "radius_km": "ਘੇਰਾ (ਕਿਮੀ)",
+          "update_interval": "ਅੱਪਡੇਟ ਅੰਤਰਾਲ (ਮਿੰਟ)",
+          "source_gvp": "Smithsonian GVP (ਵਿਸ਼ਵਵਿਆਪੀ, ~45 ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ)",
+          "source_usgs": "USGS HANS (ਅਮਰੀਕਾ + ਅਲਰਟ ਪੱਧਰ)",
+          "unit": "ਦੂਰੀ ਇਕਾਈ"
+        },
+        "data_description": {
+          "location_mode": "ਆਪਣੇ HA ਸਥਾਨ ਦੁਆਰਾ ਫਿਲਟਰ ਕਰਨ ਲਈ 'ਘਰ', ਨਕਸ਼ੇ 'ਤੇ ਬਿੰਦੂ ਚੁਣਨ ਲਈ 'ਕਸਟਮ', ਜਾਂ ਵਿਸ਼ਵਵਿਆਪੀ ਤੌਰ 'ਤੇ ਸਾਰੇ ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ ਦਿਖਾਉਣ ਲਈ 'ਸੰਸਾਰ' ਚੁਣੋ।",
+          "radius_km": "ਸਿਰਫ 'ਘਰ' ਜਾਂ 'ਕਸਟਮ' ਮੋਡ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। 'ਸੰਸਾਰ' ਮੋਡ ਵਿੱਚ ਅਣਡਿੱਠਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"
+        }
+      },
+      "custom_location": {
+        "title": "ਆਪਣਾ ਹਵਾਲਾ ਸਥਾਨ ਚੁਣੋ",
+        "description": "ਫਿਲਟਰ ਘੇਰੇ ਦਾ ਕੇਂਦਰ ਸੈੱਟ ਕਰਨ ਲਈ ਨਕਸ਼ੇ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
+        "data": {
+          "location": "ਹਵਾਲਾ ਸਥਾਨ"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "ਡਾਟਾ ਸਰੋਤਾਂ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਆਪਣਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਚੈੱਕ ਕਰੋ।",
+      "no_data": "ਕਿਸੇ ਵੀ ਸਰੋਤ ਤੋਂ ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ ਡਾਟਾ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।",
+      "both_sources_disabled": "ਘੱਟੋ-ਘੱਟ ਇੱਕ ਡਾਟਾ ਸਰੋਤ ਸਮਰੱਥ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
+    },
+    "abort": {
+      "already_configured": "ਜਵਾਲਾਮੁਖੀ ਸੰਸਾਰ ਪਹਿਲਾਂ ਹੀ ਕੌਂਫਿਗਰ ਕੀਤਾ ਗਿਆ ਹੈ।"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ਜਵਾਲਾਮੁਖੀ ਸੰਸਾਰ",
+        "description": "ਫਿਲਟਰ ਅਤੇ ਡਾਟਾ ਸਰੋਤ ਤਰਜੀਹਾਂ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ।",
+        "data": {
+          "location_mode": "ਸਥਾਨ ਫਿਲਟਰ",
+          "radius_km": "ਘੇਰਾ (ਕਿਮੀ)",
+          "update_interval": "ਅੱਪਡੇਟ ਅੰਤਰਾਲ (ਮਿੰਟ)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "ਦੂਰੀ ਇਕਾਈ"
+        }
+      },
+      "custom_location": {
+        "title": "ਹਵਾਲਾ ਸਥਾਨ ਅੱਪਡੇਟ ਕਰੋ",
+        "data": {
+          "location": "ਹਵਾਲਾ ਸਥਾਨ"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ"
+      },
+      "weekly_report_count": {
+        "name": "ਹਫਤਾਵਾਰੀ ਰਿਪੋਰਟ ਵਿੱਚ"
+      },
+      "elevated_count": {
+        "name": "ਉੱਚ ਅਲਰਟ ਪੱਧਰ ਵਾਲੇ ਜਵਾਲਾਮੁਖੀ"
+      },
+      "highest_alert": {
+        "name": "ਸਭ ਤੋਂ ਉੱਚਾ ਅਲਰਟ ਪੱਧਰ"
+      },
+      "nearby_count": {
+        "name": "ਨੇੜੇ ਦੇ ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ"
+      },
+      "closest_volcano": {
+        "name": "ਸਭ ਤੋਂ ਨਜ਼ਦੀਕੀ ਸਰਗਰਮ ਜਵਾਲਾਮੁਖੀ"
+      },
+      "most_dangerous_volcano": {
+        "name": "ਸਭ ਤੋਂ ਖਤਰਨਾਕ ਜਵਾਲਾਮੁਖੀ"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "ਨੇੜੇ ਜਵਾਲਾਮੁਖੀ ਗਤੀਵਿਧੀ"
+      },
+      "elevated_nearby": {
+        "name": "ਨੇੜੇ ਉੱਚ ਅਲਰਟ ਪੱਧਰ ਵਾਲਾ ਜਵਾਲਾਮੁਖੀ"
+      },
+      "warning_global": {
+        "name": "ਵਿਸ਼ਵਵਿਆਪੀ ਜਵਾਲਾਮੁਖੀ ਚੇਤਾਵਨੀ"
+      }
+    }
+  }
+}
