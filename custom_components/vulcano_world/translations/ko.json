@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "HA 위치로 필터링하려면 '홈', 지도에서 지점을 선택하려면 '사용자 지정', 또는 전 세계 모든 활화산을 표시하려면 '세계'를 선택하세요.",
-          "radius_km": "'홈' 또는 '사용자 지정' 모드에서만 사용됩니다. '세계' 모드에서는 무시됩니다."
+          "radius_km": "범위: 50–20,000 km · 31–12,427 mi"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "거리 단위"
+        },
+        "data_description": {
+          "radius_km": "범위: 50–20,000 km · 31–12,427 mi"
         }
       },
       "custom_location": {
