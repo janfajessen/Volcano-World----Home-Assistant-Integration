@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "Odaberite 'Dom' za filtriranje prema vašoj HA lokaciji, 'Prilagođeno' za odabir točke na karti ili 'Svijet' za prikaz svih aktivnih vulkana u svijetu.",
-          "radius_km": "Koristi se samo u načinu rada 'Dom' ili 'Prilagođeno'. Zanemaruje se u načinu rada 'Svijet'."
+          "radius_km": "Raspon: 50–20.000 km · 31–12.427 milja"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Jedinica udaljenosti"
+        },
+        "data_description": {
+          "radius_km": "Raspon: 50–20.000 km · 31–12.427 milja"
         }
       },
       "custom_location": {
