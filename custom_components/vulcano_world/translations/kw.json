@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bes an Leskynyow",
+        "description": "Keffruster py leskynyow bew dhe vonytra.\n\nFentynnyow dydh: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — nagonan yw res alhwedh API.",
+        "data": {
+          "location_mode": "Sidhla tyller",
+          "radius_km": "Radius (km)",
+          "update_interval": "Keshanow nowydhhe (min)",
+          "source_gvp": "Smithsonian GVP (bydel, ~45 leskynyow bew)",
+          "source_usgs": "USGS HANS (SUA + levelys gwarnyans)",
+          "unit": "Unses pellder"
+        },
+        "data_description": {
+          "location_mode": "Dewis 'Tre' dhe sidhla herwydh dha dyller HA, 'Gwisys' dhe dhewis poynt war an gart, po 'Bes' dhe dhiskwedhes oll an leskynyow bew bydel.",
+          "radius_km": "Usys yn 'Tre' po 'Gwisys' yn unnik. Diskeryes yn modh 'Bes'."
+        }
+      },
+      "custom_location": {
+        "title": "Dewis dha dyller referans",
+        "description": "Klic war an gart dhe settya kres an radius sidhla.",
+        "data": {
+          "location": "Tyller referans"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Ny yll kevrenna dhe'n fentynnyow dydh. Gwra hwithra dha gevrennyans kesrosweyth.",
+      "no_data": "Ny yll kavoes dydh leskyn bew a'y fenten vyth.",
+      "both_sources_disabled": "Y talvosha unn fenten dydh dhe le."
+    },
+    "abort": {
+      "already_configured": "Bes an Leskynyow yw keffruster seulabrys."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bes an Leskynyow",
+        "description": "Nowydhhe dewisyow sidhla ha fenten dydh.",
+        "data": {
+          "location_mode": "Sidhla tyller",
+          "radius_km": "Radius (km)",
+          "update_interval": "Keshanow nowydhhe (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Unses pellder"
+        }
+      },
+      "custom_location": {
+        "title": "Nowydhhe tyller referans",
+        "data": {
+          "location": "Tyller referans"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Leskynyow Bew"
+      },
+      "weekly_report_count": {
+        "name": "Yn an Derivas Seythunyek"
+      },
+      "elevated_count": {
+        "name": "Leskynyow gans Gwarnyans Ughelhes"
+      },
+      "highest_alert": {
+        "name": "Level Gwarnyans Ughelha"
+      },
+      "nearby_count": {
+        "name": "Leskynyow Bew yn ogas"
+      },
+      "closest_volcano": {
+        "name": "Leskyn Bew ogassa"
+      },
+      "most_dangerous_volcano": {
+        "name": "Leskyn peryllusa"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Gweythres Leskynel yn ogas"
+      },
+      "elevated_nearby": {
+        "name": "Leskyn gans Gwarnyans Ughelhes yn ogas"
+      },
+      "warning_global": {
+        "name": "Gwarnyans Leskynel Bydel"
+      }
+    }
+  }
+}
