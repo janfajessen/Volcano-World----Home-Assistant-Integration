@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "火山ワールド",
+        "description": "監視する活火山を設定します。\n\nデータソース: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — APIキーは不要です。",
+        "data": {
+          "location_mode": "位置フィルター",
+          "radius_km": "半径 (km)",
+          "update_interval": "更新間隔 (分)",
+          "source_gvp": "Smithsonian GVP (全世界、約45の活火山)",
+          "source_usgs": "USGS HANS (米国 + 警報レベル)",
+          "unit": "距離の単位"
+        },
+        "data_description": {
+          "location_mode": "'自宅'を選択するとHAの位置でフィルター、'カスタム'を選択すると地図上の地点を選択、'世界'を選択すると世界中のすべての活火山を表示します。",
+          "radius_km": "'自宅'または'カスタム'モードでのみ使用されます。'世界'モードでは無視されます。"
+        }
+      },
+      "custom_location": {
+        "title": "基準地点を選択",
+        "description": "地図をクリックしてフィルター半径の中心を設定します。",
+        "data": {
+          "location": "基準地点"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "データソースに接続できませんでした。インターネット接続を確認してください。",
+      "no_data": "どのソースからも活火山データを取得できませんでした。",
+      "both_sources_disabled": "少なくとも1つのデータソースを有効にする必要があります。"
+    },
+    "abort": {
+      "already_configured": "火山ワールドはすでに設定されています。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "火山ワールド",
+        "description": "フィルターとデータソースの設定を更新します。",
+        "data": {
+          "location_mode": "位置フィルター",
+          "radius_km": "半径 (km)",
+          "update_interval": "更新間隔 (分)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "距離の単位"
+        }
+      },
+      "custom_location": {
+        "title": "基準地点を更新",
+        "data": {
+          "location": "基準地点"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "活火山"
+      },
+      "weekly_report_count": {
+        "name": "週次レポート掲載数"
+      },
+      "elevated_count": {
+        "name": "警報レベル上昇中の火山"
+      },
+      "highest_alert": {
+        "name": "最高警報レベル"
+      },
+      "nearby_count": {
+        "name": "近隣の活火山"
+      },
+      "closest_volcano": {
+        "name": "最寄りの活火山"
+      },
+      "most_dangerous_volcano": {
+        "name": "最も危険な火山"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "近隣の火山活動"
+      },
+      "elevated_nearby": {
+        "name": "近隣の警報レベル上昇火山"
+      },
+      "warning_global": {
+        "name": "世界の火山警報"
+      }
+    }
+  }
+}
