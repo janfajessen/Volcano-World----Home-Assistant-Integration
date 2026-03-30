@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Ugnikalnių pasaulis",
+        "description": "Konfigūruokite, kuriuos aktyvius ugnikalnius stebėti.\n\nDuomenų šaltiniai: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — API rakto nereikia.",
+        "data": {
+          "location_mode": "Vietos filtras",
+          "radius_km": "Spindulys (km)",
+          "update_interval": "Atnaujinimo intervalas (min)",
+          "source_gvp": "Smithsonian GVP (pasaulinis, ~45 aktyvūs ugnikalniai)",
+          "source_usgs": "USGS HANS (JAV + įspėjimo lygiai)",
+          "unit": "Atstumo vienetas"
+        },
+        "data_description": {
+          "location_mode": "Pasirinkite 'Namai' filtravimui pagal jūsų HA vietą, 'Pasirinktinis' taškui žemėlapyje pasirinkti arba 'Pasaulis' rodyti visus aktyvius ugnikalnius pasaulyje.",
+          "radius_km": "Naudojamas tik 'Namai' arba 'Pasirinktinis' režimu. Ignoruojamas 'Pasaulis' režimu."
+        }
+      },
+      "custom_location": {
+        "title": "Pasirinkite savo atskaitos vietą",
+        "description": "Spustelėkite žemėlapį, kad nustatytumėte filtro spindulio centrą.",
+        "data": {
+          "location": "Atskaitos vieta"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nepavyko prisijungti prie duomenų šaltinių. Patikrinkite savo interneto ryšį.",
+      "no_data": "Nepavyko gauti aktyvių ugnikalnių duomenų iš jokio šaltinio.",
+      "both_sources_disabled": "Turi būti įjungtas bent vienas duomenų šaltinis."
+    },
+    "abort": {
+      "already_configured": "Ugnikalnių pasaulis jau sukonfigūruotas."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ugnikalnių pasaulis",
+        "description": "Atnaujinkite filtro ir duomenų šaltinių nuostatas.",
+        "data": {
+          "location_mode": "Vietos filtras",
+          "radius_km": "Spindulys (km)",
+          "update_interval": "Atnaujinimo intervalas (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Atstumo vienetas"
+        }
+      },
+      "custom_location": {
+        "title": "Atnaujinti atskaitos vietą",
+        "data": {
+          "location": "Atskaitos vieta"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Aktyvūs ugnikalniai"
+      },
+      "weekly_report_count": {
+        "name": "Savaitinėje ataskaitoje"
+      },
+      "elevated_count": {
+        "name": "Padidinto įspėjimo ugnikalniai"
+      },
+      "highest_alert": {
+        "name": "Aukščiausias įspėjimo lygis"
+      },
+      "nearby_count": {
+        "name": "Netoliese esantys aktyvūs ugnikalniai"
+      },
+      "closest_volcano": {
+        "name": "Artimiausias aktyvus ugnikalnis"
+      },
+      "most_dangerous_volcano": {
+        "name": "Pavojingiausias ugnikalnis"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Ugnikalnių aktyvumas netoliese"
+      },
+      "elevated_nearby": {
+        "name": "Padidinto įspėjimo ugnikalnis netoliese"
+      },
+      "warning_global": {
+        "name": "Pasaulinis įspėjimas apie ugnikalnius"
+      }
+    }
+  }
+}
