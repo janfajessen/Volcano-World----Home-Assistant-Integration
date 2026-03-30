@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "בחר 'בית' לסינון לפי מיקום ה-HA שלך, 'מותאם אישית' לבחירת נקודה במפה, או 'עולם' להצגת כל הרי הגעש הפעילים בעולם.",
-          "radius_km": "משמש רק במצב 'בית' או 'מותאם אישית'. מתעלם במצב 'עולם'."
+          "radius_km": "טווח: 50–20,000 ק\"מ · 31–12,427 מייל"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "יחידת מרחק"
+        },
+        "data_description": {
+          "radius_km": "טווח: 50–20,000 ק\"מ · 31–12,427 מייל"
         }
       },
       "custom_location": {
