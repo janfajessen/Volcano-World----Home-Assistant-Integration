@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "Aukeratu 'Etxea' zure HA kokapenaren arabera iragazteko, 'Pertsonalizatua' mapako puntu bat aukeratzeko, edo 'Mundua' sumendi aktibo guztiak erakusteko.",
-          "radius_km": "'Etxea' edo 'Pertsonalizatua' moduan bakarrik erabiltzen da. 'Mundua' moduan baztertzen da."
+          "radius_km": "Tartea: 50–20.000 km · 31–12.427 mi"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Distantzia unitatea"
+        },
+        "data_description": {
+          "radius_km": "Tartea: 50–20.000 km · 31–12.427 mi"
         }
       },
       "custom_location": {
