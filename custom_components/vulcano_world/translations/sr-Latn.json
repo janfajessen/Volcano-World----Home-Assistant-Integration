@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Svet vulkana",
+        "description": "Konfigurišite koji aktivni vulkani će se pratiti.\n\nIzvori podataka: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — nije potreban API ključ.",
+        "data": {
+          "location_mode": "Filter lokacije",
+          "radius_km": "Radijus (km)",
+          "update_interval": "Interval ažuriranja (min)",
+          "source_gvp": "Smithsonian GVP (globalni, ~45 aktivnih vulkana)",
+          "source_usgs": "USGS HANS (SAD + nivoi uzbune)",
+          "unit": "Jedinica udaljenosti"
+        },
+        "data_description": {
+          "location_mode": "Izaberite 'Dom' za filtriranje prema vašoj HA lokaciji, 'Prilagođeno' za izbor tačke na mapi ili 'Svet' za prikaz svih aktivnih vulkana globalno.",
+          "radius_km": "Koristi se samo u režimu 'Dom' ili 'Prilagođeno'. Ignoriše se u režimu 'Svet'."
+        }
+      },
+      "custom_location": {
+        "title": "Izaberite svoju referentnu lokaciju",
+        "description": "Kliknite na mapu da biste postavili centar radijusa filtera.",
+        "data": {
+          "location": "Referentna lokacija"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nije moguće povezivanje sa izvorima podataka. Proverite internet vezu.",
+      "no_data": "Nije moguće preuzeti podatke o aktivnim vulkanima ni iz jednog izvora.",
+      "both_sources_disabled": "Mora biti omogućen bar jedan izvor podataka."
+    },
+    "abort": {
+      "already_configured": "Svet vulkana je već konfigurisan."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Svet vulkana",
+        "description": "Ažurirajte podešavanja filtera i izvora podataka.",
+        "data": {
+          "location_mode": "Filter lokacije",
+          "radius_km": "Radijus (km)",
+          "update_interval": "Interval ažuriranja (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Jedinica udaljenosti"
+        }
+      },
+      "custom_location": {
+        "title": "Ažuriraj referentnu lokaciju",
+        "data": {
+          "location": "Referentna lokacija"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Aktivni vulkani"
+      },
+      "weekly_report_count": {
+        "name": "U nedeljnom izveštaju"
+      },
+      "elevated_count": {
+        "name": "Vulkani sa povišenom uzbunom"
+      },
+      "highest_alert": {
+        "name": "Najviši nivo uzbune"
+      },
+      "nearby_count": {
+        "name": "Aktivni vulkani u blizini"
+      },
+      "closest_volcano": {
+        "name": "Najbliži aktivni vulkan"
+      },
+      "most_dangerous_volcano": {
+        "name": "Najopasniji vulkan"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Vulkanska aktivnost u blizini"
+      },
+      "elevated_nearby": {
+        "name": "Vulkan sa povišenom uzbunom u blizini"
+      },
+      "warning_global": {
+        "name": "Globalno upozorenje na vulkane"
+      }
+    }
+  }
+}
