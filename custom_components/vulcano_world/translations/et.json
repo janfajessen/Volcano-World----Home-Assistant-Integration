@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "Vali 'Kodu' filtreerimaks sinu HA asukoha järgi, 'Kohandatud' et valida kaardil punkt või 'Maailm' et näidata kõiki globaalseid aktiivseid vulkaane.",
-          "radius_km": "Kasutatakse ainult režiimis 'Kodu' või 'Kohandatud'. Režiimis 'Maailm' eiratakse."
+          "radius_km": "Vahemik: 50–20 000 km · 31–12 427 miili"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Kaugusühik"
+        },
+        "data_description": {
+          "radius_km": "Vahemik: 50–20 000 km · 31–12 427 miili"
         }
       },
       "custom_location": {
