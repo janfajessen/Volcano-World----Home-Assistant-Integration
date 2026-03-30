@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tulivuorten maailma",
+        "description": "Määritä, mitä aktiivisia tulivuoria seurataan.\n\nTietolähteet: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — API-avainta ei tarvita.",
+        "data": {
+          "location_mode": "Sijaintisuodatin",
+          "radius_km": "Säde (km)",
+          "update_interval": "Päivitysväli (min)",
+          "source_gvp": "Smithsonian GVP (maailmanlaajuinen, ~45 aktiivista tulivuorta)",
+          "source_usgs": "USGS HANS (USA + hälytystasot)",
+          "unit": "Etäisyysyksikkö"
+        },
+        "data_description": {
+          "location_mode": "Valitse 'Koti' suodattaaksesi HA-sijaintisi mukaan, 'Mukautettu' valitaksesi pisteen kartalta tai 'Maailma' näyttääksesi kaikki aktiiviset tulivuoret maailmanlaajuisesti.",
+          "radius_km": "Käytetään vain 'Koti'- tai 'Mukautettu'-tilassa. Ohitetaan 'Maailma'-tilassa."
+        }
+      },
+      "custom_location": {
+        "title": "Valitse viitesijaintisi",
+        "description": "Napsauta karttaa asettaaksesi suodattimen säteen keskipisteen.",
+        "data": {
+          "location": "Viitesijainti"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Yhteyttä tietolähteisiin ei saatu. Tarkista internetyhteytesi.",
+      "no_data": "Aktiivisten tulivuorten tietoja ei voitu hakea mistään lähteestä.",
+      "both_sources_disabled": "Vähintään yhden tietolähteen on oltava käytössä."
+    },
+    "abort": {
+      "already_configured": "Tulivuorten maailma on jo määritetty."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tulivuorten maailma",
+        "description": "Päivitä suodatin- ja tietolähdeasetukset.",
+        "data": {
+          "location_mode": "Sijaintisuodatin",
+          "radius_km": "Säde (km)",
+          "update_interval": "Päivitysväli (min)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Etäisyysyksikkö"
+        }
+      },
+      "custom_location": {
+        "title": "Päivitä viitesijainti",
+        "data": {
+          "location": "Viitesijainti"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Aktiiviset tulivuoret"
+      },
+      "weekly_report_count": {
+        "name": "Viikkoraportissa"
+      },
+      "elevated_count": {
+        "name": "Kohonneen hälytyksen tulivuoret"
+      },
+      "highest_alert": {
+        "name": "Korkein hälytystaso"
+      },
+      "nearby_count": {
+        "name": "Lähellä olevat aktiiviset tulivuoret"
+      },
+      "closest_volcano": {
+        "name": "Lähin aktiivinen tulivuori"
+      },
+      "most_dangerous_volcano": {
+        "name": "Vaarallisin tulivuori"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Tulivuoritoimintaa lähellä"
+      },
+      "elevated_nearby": {
+        "name": "Kohonneen hälytyksen tulivuori lähellä"
+      },
+      "warning_global": {
+        "name": "Globaali tulivuorivaroitus"
+      }
+    }
+  }
+}
