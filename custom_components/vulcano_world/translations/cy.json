@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "Dewiswch 'Cartref' i hidlo yn ôl eich lleoliad HA, 'Cyfaddas' i ddewis pwynt ar y map, neu 'Byd' i ddangos pob llosgfynydd gweithredol yn fyd-eang.",
-          "radius_km": "Defnyddir yn unig yn y modd 'Cartref' neu 'Cyfaddas'. Anwybyddir yn y modd 'Byd'."
+          "radius_km": "Ystod: 50–20,000 km · 31–12,427 milltir"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Uned pellter"
+        },
+        "data_description": {
+          "radius_km": "Ystod: 50–20,000 km · 31–12,427 milltir"
         }
       },
       "custom_location": {
