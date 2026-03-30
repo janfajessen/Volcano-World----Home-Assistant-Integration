@@ -13,8 +13,8 @@
           "unit": "Unité de distance"
         },
         "data_description": {
-          "location_mode": "Choisissez 'Home' pour filtrer par votre emplacement HA, 'Personnalisé' pour choisir un point sur la carte, ou 'Monde' pour afficher tous les volcans actifs.",
-          "radius_km": "Pertinent uniquement si le mode est 'Home' ou 'Personnalisé'. Ignoré en mode 'Monde'."
+          "location_mode": "Choisissez 'Domicile' pour filtrer par votre emplacement HA, 'Personnalisé' pour sélectionner un point sur la carte, ou 'Monde' pour afficher tous les volcans actifs dans le monde.",
+          "radius_km": "Plage : 50–20 000 km · 31–12 427 mi"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Unité de distance"
+        },
+        "data_description": {
+          "radius_km": "Plage : 50–20 000 km · 31–12 427 mi"
         }
       },
       "custom_location": {
