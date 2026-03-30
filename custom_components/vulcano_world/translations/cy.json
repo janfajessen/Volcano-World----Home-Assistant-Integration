@@ -1,0 +1,95 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Byd Llosgfynyddoedd",
+        "description": "Cyflunwch pa losgfynyddoedd gweithredol i'w monitro.\n\nFfynonellau data: [Smithsonian GVP]({gvp_url}) + [USGS HANS]({usgs_url}) — dim angen allwedd API.",
+        "data": {
+          "location_mode": "Hidlydd lleoliad",
+          "radius_km": "Radiws (km)",
+          "update_interval": "Cyfwng diweddaru (mun)",
+          "source_gvp": "Smithsonian GVP (byd-eang, ~45 llosgfynydd gweithredol)",
+          "source_usgs": "USGS HANS (UDA + lefelau rhybudd)",
+          "unit": "Uned pellter"
+        },
+        "data_description": {
+          "location_mode": "Dewiswch 'Cartref' i hidlo yn ôl eich lleoliad HA, 'Cyfaddas' i ddewis pwynt ar y map, neu 'Byd' i ddangos pob llosgfynydd gweithredol yn fyd-eang.",
+          "radius_km": "Defnyddir yn unig yn y modd 'Cartref' neu 'Cyfaddas'. Anwybyddir yn y modd 'Byd'."
+        }
+      },
+      "custom_location": {
+        "title": "Dewiswch eich lleoliad cyfeirio",
+        "description": "Cliciwch ar y map i osod canol y radiws hidlo.",
+        "data": {
+          "location": "Lleoliad cyfeirio"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Methu cysylltu â ffynonellau data. Gwiriwch eich cysylltiad rhyngrwyd.",
+      "no_data": "Ni ellid cael unrhyw ddata llosgfynydd gweithredol o unrhyw ffynhonnell.",
+      "both_sources_disabled": "Rhaid galluogi o leiaf un ffynhonnell ddata."
+    },
+    "abort": {
+      "already_configured": "Mae Byd Llosgfynyddoedd eisoes wedi'i gyflunio."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Byd Llosgfynyddoedd",
+        "description": "Diweddarwch ddewisiadau hidlo a ffynhonnell ddata.",
+        "data": {
+          "location_mode": "Hidlydd lleoliad",
+          "radius_km": "Radiws (km)",
+          "update_interval": "Cyfwng diweddaru (mun)",
+          "source_gvp": "Smithsonian GVP",
+          "source_usgs": "USGS HANS",
+          "unit": "Uned pellter"
+        }
+      },
+      "custom_location": {
+        "title": "Diweddaru lleoliad cyfeirio",
+        "data": {
+          "location": "Lleoliad cyfeirio"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "active_count": {
+        "name": "Llosgfynyddoedd Gweithredol"
+      },
+      "weekly_report_count": {
+        "name": "Yn yr Adroddiad Wythnosol"
+      },
+      "elevated_count": {
+        "name": "Llosgfynyddoedd â Rhybudd Uwch"
+      },
+      "highest_alert": {
+        "name": "Lefel Rhybudd Uchaf"
+      },
+      "nearby_count": {
+        "name": "Llosgfynyddoedd Gweithredol Gerllaw"
+      },
+      "closest_volcano": {
+        "name": "Llosgfynydd Gweithredol Agosaf"
+      },
+      "most_dangerous_volcano": {
+        "name": "Llosgfynydd Mwyaf Peryglus"
+      }
+    },
+    "binary_sensor": {
+      "activity_nearby": {
+        "name": "Gweithgaredd Llosgfynyddol Gerllaw"
+      },
+      "elevated_nearby": {
+        "name": "Llosgfynydd â Rhybudd Uwch Gerllaw"
+      },
+      "warning_global": {
+        "name": "Rhybudd Llosgfynyddol Byd-eang"
+      }
+    }
+  }
+}
