@@ -14,7 +14,7 @@
         },
         "data_description": {
           "location_mode": "Wybierz 'Dom', aby filtrować według swojej lokalizacji HA, 'Niestandardowy', aby wybrać punkt na mapie, lub 'Świat', aby pokazać wszystkie aktywne wulkany na świecie.",
-          "radius_km": "Używany tylko w trybie 'Dom' lub 'Niestandardowy'. Ignorowany w trybie 'Świat'."
+          "radius_km": "Zakres: 50–20 000 km · 31–12 427 mil"
         }
       },
       "custom_location": {
@@ -46,6 +46,9 @@
           "source_gvp": "Smithsonian GVP",
           "source_usgs": "USGS HANS",
           "unit": "Jednostka odległości"
+        },
+        "data_description": {
+          "radius_km": "Zakres: 50–20 000 km · 31–12 427 mil"
         }
       },
       "custom_location": {
