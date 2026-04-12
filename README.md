@@ -1,5 +1,7 @@
-# 🌋 Volcano World 🌋 <br> Home Assistant Integration
 <div align="center">
+    
+# 🌋 Volcano World 🌋 <br> Home Assistant Integration
+
 <img src="https://github.com/janfajessen/Volcano-World/blob/76daa9ee24ca0d4b9e27bff34318d01607362da9/brands/logo%402x.png" alt="Volcano World" width="400">
 
 ![Version](https://img.shields.io/badge/version-1.5.24-blue?style=for-the-badge)
