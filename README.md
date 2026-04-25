@@ -336,3 +336,5 @@ Integration code licensed under **MIT**. See [LICENSE](LICENSE).
 ---
 
 *Volcano World is an independent community integration and is not affiliated with Smithsonian Institution or USGS.*
+
+© [@janfajessen](https://github.com/janfajessen)
