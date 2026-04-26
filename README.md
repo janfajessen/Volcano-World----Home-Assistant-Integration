@@ -4,7 +4,7 @@
 
 <img src="https://github.com/janfajessen/Volcano-World---Home-Assistant/blob/e51dfbea73df892c8a413725abdeeca14e2e52ea/brand/logo%402x.png" width="450"/>
 
-![Version](https://img.shields.io/badge/version-1.5.24-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.13.2-blue?style=for-the-badge)
 ![HA](https://img.shields.io/badge/Home%20Assistant-2024.1+-orange?style=for-the-badge&logo=home-assistant)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python)
